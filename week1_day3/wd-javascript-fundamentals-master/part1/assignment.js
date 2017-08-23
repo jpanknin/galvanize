@@ -405,7 +405,17 @@ function iceCreamPosition(pieTemperature, iceCreamFlavor) {
 //
 // See: https://en.wikipedia.org/wiki/Leap_year#Algorithm
 
-
+function isLeapYear(year) {
+  if (year % 4 !== 0) {
+    return false;
+  } else if (year % 100 !== 0) {
+    return true;
+  } else if (year % 400 !== 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 // Define a function named shout that takes one argument
 //    message (string)
@@ -415,7 +425,13 @@ function iceCreamPosition(pieTemperature, iceCreamFlavor) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-
+function shout(message) {
+  var upper = "";
+  for (letter in message) {
+    upper = upper + message[letter].toUpperCase();
+  }
+  return upper;
+}
 
 // Define a function named whisper that takes one argument
 //    message (string)
@@ -425,7 +441,13 @@ function iceCreamPosition(pieTemperature, iceCreamFlavor) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-
+function whisper(message) {
+  var lower = "";
+  for (letter in message) {
+    lower += message[letter].toLowerCase();
+  }
+  return "shhh... " + lower;
+}
 
 // Define a function named stopAt that takes two arguments
 //   source (string)
@@ -452,7 +474,10 @@ function iceCreamPosition(pieTemperature, iceCreamFlavor) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 
-
+function capitalize(message) {
+  newMessage = message[0].toUpperCase() + message.substring(1, );
+  return newMessage;
+}
 
 // Define a function named leftPad5 that takes one argument
 //    word (string)
