@@ -365,8 +365,11 @@ function largestOfThree(value1, value2, value3) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 function longestOfThree(value1, value2, value3) {
-  longest = Math.max((value1.length), (value2.length), (value3.length));
-  return longest
+  value1Length = value1.length;
+  value2Length = value2.length;
+  value3Length = value3.length;
+  longest = Math.max(value1Length, value2Length, value3Length);
+  return longest;
 }
 
 // Define a function named iceCreamPosition that takes two arguments
@@ -464,7 +467,16 @@ function whisper(message) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 
-
+function stopAt(source, stop) {
+  var words = [];
+  for (word in source) {
+    words.push;
+  }
+  for (word in words) {
+    var index = words.indexof(stop);
+  }
+  return source.substring[0, index];
+}
 
 // Define a function named capitalize that takes one argument
 //    message (string)
@@ -487,7 +499,15 @@ function capitalize(message) {
 // If the argument's length is 5 or more characters
 //    Return the argument
 
-
+function leftPad5(word) {
+  len = word.length
+  if (len >= 5) {
+    return word;
+  } else {
+    short = (5 - len);
+    return " ".repeat(short) + word;
+  }
+}
 
 // Define a function named superPicky that takes one argument
 //    value (anything)
@@ -499,7 +519,14 @@ function capitalize(message) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
-
+function superPicky(value) {
+  type = typeof value;
+  if (type == 'string') {
+    return 'Thanks! Got it.';
+  } else {
+    return 'I wanted a string, but all I got was a stinking ' + type;
+  }
+}
 
 // Define a function named calculateTaxRate that takes two arguments
 //    salary (number from 1 to 74,900)
@@ -511,3 +538,11 @@ function capitalize(message) {
 //    Return a string that says 'Better call an accountant'
 // Otherwise
 //    Return the correct tax rate as a string using the table from http://www.efile.com/tax-service/tax-calculator/tax-brackets/
+
+function calculateTaxRate(salary, status) {
+  if ((status == 'single') || (status == 'joint') || (salary > 74900)) {
+    return 'Better call an accountant';
+  } else {
+
+  }
+}
