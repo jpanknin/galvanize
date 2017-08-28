@@ -1,8 +1,9 @@
 
 
-function personalMachine(myName, yourName) {
-  console.log("Your machine is working, " + myName + "!")
-  console.log("Your machine is working, " + yourName + "!")
+function yourName(firstName, lastName) {
+
+  return firstName + " " + lastName;
 }
 
-personalMachine("Josh", "Jake");
+var user1 = yourName("Josh", "Panknin");
+var user2 = yourName("Hughie", "Panknin");

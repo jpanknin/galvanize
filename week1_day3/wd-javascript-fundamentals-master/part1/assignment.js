@@ -365,11 +365,9 @@ function largestOfThree(value1, value2, value3) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 function longestOfThree(value1, value2, value3) {
-  value1Length = value1.length;
-  value2Length = value2.length;
-  value3Length = value3.length;
-  longest = Math.max(value1Length, value2Length, value3Length);
-  return longest;
+  var values = [value1, value2, value3]
+  var lengths = [value1.length, value2.length, value3.length];
+  return values[lengths.indexOf(Math.max(...lengths))];
 }
 
 // Define a function named iceCreamPosition that takes two arguments
@@ -468,14 +466,10 @@ function whisper(message) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 
 function stopAt(source, stop) {
-  var words = [];
-  for (word in source) {
-    words.push;
-  }
-  for (word in words) {
-    var index = words.indexof(stop);
-  }
-  return source.substring[0, index];
+  var key = source.indexOf(stop);
+  var sub = source.substring(0, key);
+  var right = sub.trim()
+  return right;
 }
 
 // Define a function named capitalize that takes one argument
@@ -540,9 +534,44 @@ function superPicky(value) {
 //    Return the correct tax rate as a string using the table from http://www.efile.com/tax-service/tax-calculator/tax-brackets/
 
 function calculateTaxRate(salary, status) {
-  if ((status == 'single') || (status == 'joint') || (salary > 74900)) {
+  if (salary > 74900) {
     return 'Better call an accountant';
+  } else if (status.toLowerCase() == 'single') {
+      if (salary > 0 && salary <= 9275) {
+        return '10%';
+      } else if (salary <= 37650) {
+        return '15%';
+      } else {
+        return '25%';
+      }
+  } else if (status.toLowerCase() == 'joint') {
+    if (salary > 0 && salary <= 18550) {
+      return '10%';
+    } else {
+      return '15%';
+    }
   } else {
-
-  }
+    return 'Better call an accountant';
+    }
 }
+  // if ((status.toLowerCase() != 'single') || (status.toLowerCase() != 'joint') || (salary > 74900)) {
+  //   return 'Better call an accountant';
+  // } else {
+  //     if (salary > 0 && salary <= 9325) {
+  //       return '10%';
+  //     } else if (salary < 37950) {
+  //       return '15%';
+  //     } else {
+  //       return '25%';
+  //     }
+    // switch (salary) {
+    //   case (salary > 0 && salary <= 9325):
+    //     return "10%";
+    //     break;
+    //   case (salary < 37950):
+    //     return "15%";
+    //     break;
+    //   case (salary <= 74900):
+    //     return "25%";
+    //     break;
+    // }
