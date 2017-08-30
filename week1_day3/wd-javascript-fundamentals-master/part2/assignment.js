@@ -238,14 +238,14 @@ function distance(point1, point2) {
 // given {c: 3} and {c: 4}, then return {c: 4}.
 
 function combine(obj1, obj2) {
+  var arr = [obj1, obj2];
   var newObject = {};
-  var key1 = Object.keys(obj1);
-  var value1 = Object.values(obj1);
-  newObject.key = key1;
-  newObject.value = value1;
-  console.log(key1, value1);
-  console.log(newObject);
-  // newObj[Object.key] =
+  for (var i = 0; i < arr.length; i++) {
+    for (var key in arr[i]) {
+      newObject[key] = arr[i][key];
+      }
+    }
+  return newObject;
 }
 
 // Define a function called invert that takes in one argument.
@@ -254,10 +254,31 @@ function combine(obj1, obj2) {
 // Return a new object where the keys and values of the argument are inverted.
 // For example, given { a: 1, b: 2 }, then return { '1': 'a', '2': 'b' }.
 
+// function invert(obj) {
+//   var newObject = {};
+//   if (Object.keys(obj).length < 1) {
+//     return newObject;
+//   } else {
+//     for (var key in obj) {
+//       var name = Object.keys(obj);
+//       name = name[0];
+//       console.log('name ' + name);
+//       var value = obj[name];
+//       newObject = { [value]: name};
+//     }
+//   }
+//   return newObject;
+// }
+
+// Getting close, but not exact
 function invert(obj) {
+  var newObj = {};
   for (var key in obj) {
-    // console.log(key);
+    var value = Object.keys(obj);
+    console.log(value);
+    newObj[obj[key]] = key;
   }
+  return newObj;
 }
 
 
@@ -281,21 +302,20 @@ function values(obj) {
 
 function toPairs(obj) {
   var arr = [];
-  if (Object.keys(obj).length == undefined) {
+  if (Object.keys(obj).length < 1) {
     return arr;
   } else {
-    for (item in obj) {
       var i = 0;
-      var key = Object.keys(obj);
-      var value = obj[key];
-      arr[i][0].push(key);
-      arr[i][1].push(value);
-      console.log(arr);
-      i++;
-    }
+      for(var key in obj) {
+        key = Object.keys(obj)[i];
+        var value = obj[key];
+        arr.push([key, value]);
+        i++
+      }
+    return arr;
   }
-  return arr;
 }
+
 
 
 // Define a function called fromPairs that takes in one argument.
@@ -306,5 +326,10 @@ function toPairs(obj) {
 // { a: 1, b: 2 }.
 
 function fromPairs(arr) {
-
+  var obj = {};
+  for(var i = 0; i < arr.length; i++) {
+    var key = arr[i][0];
+    obj[key] = arr[i][1];
+  }
+  return obj;
 }
