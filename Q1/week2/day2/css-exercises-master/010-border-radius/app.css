@@ -1,0 +1,47 @@
+p {
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+.post {
+  border: 1px solid rgba(000,000,000,0.2);
+  padding: 10px;
+  max-width: 650px;
+}
+
+.post > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Your Code Goes Under This Line */
+.full {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px 100px;
+  background: black;
+  margin: 10px;
+}
+
+.outline {
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+  background: white;
+  border-radius: 100px 100px;
+}
+
+.post {
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+}

@@ -1,6 +1,7 @@
 html {
   background: black;
   color: white;
+  font-family: sans-serif;
 }
 
 section {
@@ -8,11 +9,18 @@ section {
 }
 
 figure {
-  display: block;
+  display: inline;
+  padding: 5px;
 }
 
 img {
   width: 30%;
   height: 10%;
   align: middle;
+  border: 2px solid black;
+  box-shadow: 5px 5px #b3b3b3;
+}
+
+p {
+  text-align: justify;
 }

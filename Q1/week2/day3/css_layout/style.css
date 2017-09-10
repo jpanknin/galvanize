@@ -1,0 +1,43 @@
+#col1 {
+  width: 58%;
+  /*background-color: red;*/
+  float: left;
+}
+
+#col2 {
+  width: 38%;
+  /*background-color: yellow;*/
+  float: left;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  /*background-color: green;*/
+  line-height: 40px;
+}
+
+header {
+  /*background-color: purple;*/
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+div {
+  text-align: justify;
+  padding: 10px;
+  font-size: 1.2em;
+}

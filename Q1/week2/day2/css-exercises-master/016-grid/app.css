@@ -1,0 +1,70 @@
+img {
+  max-width: 50%;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+  font-family: sans-serif;
+}
+
+div {
+  color: #7BBADE;
+  background: #222;
+  border-left: 1px solid white;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  color: #93DE7F;
+  border-bottom: 1px solid #93DE7F;
+  padding: 5px;
+  background: #222;
+}
+
+/* Code Under This Line */
+.columns {
+  clear: both;
+}
+
+.columns.two > .column {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  height: 100px;
+}
+
+.columns.three {
+  clear: both;
+}
+
+.columns.three > .column {
+  float: left;
+  width: 33%;
+  display: inline-block;
+  height: 100px;
+}
+
+.column.column-four {
+  float: left;
+  width: 25%;
+  display: inline-block;
+  height: 100px;
+}
+
+.column.column-two {
+  float:left;
+  height: 100px;
+  width: 50%;
+  display: inline-block;
+  margin-top: 20px;
+}

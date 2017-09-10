@@ -1,0 +1,32 @@
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  padding: 0px;
+
+}
+
+.box {
+  width: 180px;
+  height: 180px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  border: 1px solid black; /* delete me! */
+}
+
+
+/* Your Code Goes Under This Line */
+.subtle {
+  border: 0px;
+  box-shadow: 0 0 5px 5px #eff1f4;
+}
+
+.technicolor {
+  border: 0px;
+  box-shadow: 20px 0 10px red,
+  -10px -20px blue, 0 15px 5px lime;
+}

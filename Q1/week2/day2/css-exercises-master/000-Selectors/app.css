@@ -1,0 +1,32 @@
+body {
+  background: #222;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.outside {
+  height: 100px;
+}
+
+
+
+/* Code Under This Line */
+
+div {
+  background-color: green;
+}
+
+div.foo {
+  background-color: red;
+}
+
+div.bar, .fiz{
+  background-color: blue;
+}
+
+/*div.baz {
+  background-color: green;
+}*/

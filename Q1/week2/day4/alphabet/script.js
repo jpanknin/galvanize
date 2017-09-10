@@ -37,3 +37,25 @@ function alphabetPosition(text) {
 
 text = "The sunset sets at twelve o' clock."
 console.log(alphabetPosition(text));
+
+// ************************
+
+function alphabetPosition(text) {
+  var alphabet = [];
+  var endString = "";
+
+  for (var i = 97; i < 123; i++) {
+    alphabet.push(String.fromCharCode(i));
+  }
+
+  for (var j = 0; j < text.length; j++) {
+    var char = text[j].toLowerCase();
+    if (alphabet.includes(char)) {
+      endString += (alphabet.indexOf(char) + 1).toString() + " ";
+    }
+  }
+  return endString;
+}
+
+text = "The sunset sets at twelve o' clock."
+console.log(alphabetPosition(text));

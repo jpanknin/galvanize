@@ -1,0 +1,21 @@
+img {
+  max-width: 100%;
+}
+
+/* Code Under This Line */
+#red_10 {
+  border: 10px solid red;
+}
+
+#blue_10 {
+  border: 10px dashed blue;
+}
+
+#green_10 {
+  border-left: 10px solid green;
+}
+
+.flag {
+  border: 5px solid;
+  border-color: red blue;
+}

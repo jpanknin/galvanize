@@ -1,0 +1,31 @@
+
+
+body {
+  background: #222;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clear {
+  overflow: hidden;
+  width: 100%;
+}
+
+
+/* added the box-sizing: border-box*/
+div {
+  background: white;
+  color: #222;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Your Code Goes Under This Line */
