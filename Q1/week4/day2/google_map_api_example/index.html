@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Maps API Example</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Google Maps</h1>
+    <form>
+      <input type="text" id="lat">
+      <input type="text" id="lng">
+      <input type="submit">
+    </form>
+    <div id='mapGoesHere'>
+
+    </div>
+
+    <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var lat = document.querySelector('#lat').value;
+      var lng = document.querySelector('#lng').value;
+      console.log("Lat: " + lat + "Lng: " + lng);
+    })
+      function initMap() {
+        var map = new google.maps.Map(document.querySelector('#mapGoesHere'), {
+          zoom: 12,
+          center: {lat: 40.7264, lng: -74.0078}
+        });
+        var marker = new google.maps.Marker( {
+          position: {lat: 40.7264, lng: -74.0078},
+          map: map
+        });
+        var marker2 = new google.maps.Marker( {
+          position: {lat: 40.8075, lng: -73.9626},
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABI8oXxo4OLtgLj-PenZaDkwmeDHqj5iE&callback=initMap">
+    </script>
+  </body>
+</html>
