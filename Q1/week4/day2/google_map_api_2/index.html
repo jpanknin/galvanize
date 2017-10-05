@@ -19,9 +19,17 @@
 
     <script>
       function initMap() {
+        var marker;
 
         document.querySelector('form').addEventListener('submit', function(event) {
           event.preventDefault();
+          console.log("Market outside of if statement");
+          if (marker) {
+            console.log("Marker before null set: " + Object.keys(marker));
+            marker.setMap(null);
+            console.log("Marker after null set: " + Object.keys(marker));
+
+          }
           var lat = parseFloat(document.querySelector('#lat').value);
           var lng = parseFloat(document.querySelector('#lng').value);
 

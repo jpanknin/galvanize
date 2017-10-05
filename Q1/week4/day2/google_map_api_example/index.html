@@ -8,8 +8,8 @@
   <body>
     <h1>Google Maps</h1>
     <form>
-      <input type="text" id="lat">
-      <input type="text" id="lng">
+      <input type="text" id="lat" placeholder="Latitude">
+      <input type="text" id="lng" placeholder="Longitude">
       <input type="submit">
     </form>
     <div id='mapGoesHere'>
@@ -17,23 +17,22 @@
     </div>
 
     <script>
-    document.querySelector('form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var lat = document.querySelector('#lat').value;
-      var lng = document.querySelector('#lng').value;
-      console.log("Lat: " + lat + "Lng: " + lng);
-    })
+
+
+
       function initMap() {
         var map = new google.maps.Map(document.querySelector('#mapGoesHere'), {
           zoom: 12,
           center: {lat: 40.7264, lng: -74.0078}
         });
+        document.querySelector('form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          var latitude = parseFloat(document.querySelector('#lat').value);
+          var longitude = parseFloat(document.querySelector('#lng').value);
+          console.log("Lat: " + lat + "Lng: " + lng);
+        })
         var marker = new google.maps.Marker( {
-          position: {lat: 40.7264, lng: -74.0078},
-          map: map
-        });
-        var marker2 = new google.maps.Marker( {
-          position: {lat: 40.8075, lng: -73.9626},
+          position: {lat: latitude, lng: longitude},
           map: map
         });
       }

@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+  flex: 1 0 auto;
+  padding-top: 2em;
+}
+
+nav {
+  background-color: #2196f3;
+}
+
+.page-footer {
+  background-color: #304ffe;
+}
+
+.brand-logo {
+  color: #01579b;
+}

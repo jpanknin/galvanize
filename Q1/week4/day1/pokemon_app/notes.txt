@@ -1,0 +1,13 @@
+Steps for doing this project.
+
+Added a form to html
+- input box
+- submit button
+
+Add jQuery library (for ajax method)
+- Add the jQuery above/before the normal script so the
+    script can use the jQuery
+
+
+Add event listener for form submit
+- prevent default behavior

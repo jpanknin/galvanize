@@ -8,16 +8,18 @@ submitButn.addEventListener('submit', function(event) {
     var docs = data.response.docs;
     console.log(docs);
     for (var i = 0; i < docs.length; i++) {
-      console.log(docs[i].headline.main);
-      var para = document.createElement('p');
-      var headlines = document.querySelector('body');
-      var headline = document.createTextNode((i + 1) + ". " + docs[i].snippet);
-      para.appendChild(headline);
-      headlines.appendChild(para);
+      var pubDate = docs[i].pub_date;
+      if (pubDate != undefined) {
+        var date = pubDate.slice(0, 10);
+        var time = pubDate.slice(11, 19);
+        console.log(date + " " + time);
+        var dateBox = document.querySelector('#dateBox');
+        var para = document.createElement('p');
+        var appendDate = document.createTextNode(date);
+        para.appendChild(appendDate);
+        dateBox.appendChild(para);
+      }
 
     }
   })
 })
-
-
-https://static01.nyt.com/images/2017/09/08/world/08convoysub/08convoysub-master768.jpg
